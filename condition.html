@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+
+<!------------------------------HEAD------------------------------------------------>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nutrition Ninja</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <style>
+        /*container holding the boxes */
+        .condition-containers {
+            display: flex;
+            justify-content: center; /* centers the boxes horizontally */
+            gap: 20px; /*puts space between boxes */
+            padding-bottom: 100px;
+        }
+
+        /*box styles*/
+        .conditioncontainer {
+            border: 1px solid #ccc;
+            padding: 20px;
+            min-width: 270px;
+            max-width: 270px;
+            background-color: white;
+            text-align: center;
+            min-height: 270px;
+        }
+
+        .box-title {
+            font-size: 1.7em;
+            padding-bottom: 15px;
+        }
+
+        .condition-title {
+            font-size: 2em;
+            text-align: center;
+            padding-top: 260px;
+        }
+
+    </style>
+</head>
+
+<!------------------------------BODY------------------------------------------------>
+<body>
+    <nav class = "navigation-bar">
+        <div class="sandwich-icon-area" onclick="openNav()"> &#9776; </div>
+        <div class="title">Nutrition Ninja </div>
+        <div class="logo"><img src="nutritionmedia/burger.png" class="logo" alt="logo"></div>
+
+    </nav>
+
+
+    <!--curtain dropdown menu-->
+    <div id="myNav" class="overlay">
+        <p class="close-icon" onclick="closeNav()"> &times; </p>
+        <div class="overlay-content">
+            <a href="index.html">HOME</a>
+            <a href="condition.html">CONDITIONS</a>
+            <a href="facts.html">FACTS</a>
+            <a href="tips.html">TIPS</a>
+            <a href="contact.html">CONTACT ME</a>
+        </div>
+    </div>
+
+    <!------------MAIN AREA-------------->
+    <main>
+    
+        <p class="condition-title">CONDITIONS</p>
+        <!-- flexbox for containers -->
+        <div class="condition-containers">
+            <!--left box -->
+            <div class="conditioncontainer">
+                <p class="box-title">Iron Deficiency</p>
+                <p>Iron deficiency anemia, is characterized by an inadequate number
+                     of healthy red blood cells in the blood.</p>
+            </div>
+            <!--left middle box-->
+            <div class="conditioncontainer">
+                <p class="box-title">Diabetes</p>
+                <p>People of all ages are susceptible to the prevalent illness known as diabetes.
+                Diabetes can take various different forms. The most typical type is type 2.</p>
+            </div>
+            <!--middle box-->
+            <div class="conditioncontainer">
+                <p class="box-title">Obesity</p>
+                <p>Being obese is a complicated illness that involves excess body fat.
+                    Being obese is more than simply a visual issue. It is a medical condition that raises
+                    the possibility of numerous other illnesses and health issues. High cholesterol,
+                    liver disease, sleep apnea, and some types of cancer are a few examples of these.
+                </p>
+            </div>
+            <!--rightmidbox-->
+            <div class="conditioncontainer">
+                <p class="box-title">Cardiovascular Disease</p>
+                <p>Heart and blood vessel illnesses together referred to as CVDs include rheumatic
+                    heart disease, coronary heart disease, and cerebrovascular disease.
+                </p>
+            </div>
+            <!--right box -->
+            <div class="conditioncontainer">
+                <p class="box-title">Gout</p>
+                <p>An excruciating kind of arthritis is gout. Sharp crystals can develop in your joints
+                    (often your big toe) when your body produces too much uric acid. Gout attacks are periods
+                    of time where flare-ups of symptoms such as pain and edoema occur periodically.
+                </p>
+            </div>
+        </div>
+
+
+
+        
+    </main>
+<!---------------footer--------------->
+    <footer>
+        <a href="contact.html">
+        <button type="submit">
+            <div class="email-button"><img src="nutritionmedia/gmail.png" style="float: left;" class="footerimg"></div>
+        </button>
+        </a>
+        <div class="footer-text">ITWD5.130: WEBSITE DEVELOPMENT<br> NOAH SYMON @ 2024</div>
+    </footer>
+
+    <!--hamburger menu script -->
+    <script>
+        function openNav() {
+            document.getElementById("myNav").style.display = "block";
+        }
+
+        function closeNav() {
+            document.getElementById("myNav").style.display = "none";
+        }
+    </script>
+</body>
+
+</html>

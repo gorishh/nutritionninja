@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+
+<!------------------------------HEAD------------------------------------------------>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nutrition Ninja</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <style>
+        /*container holding the boxes */
+        .facts-containers {
+            display: flex;
+            justify-content: center; /* centers the boxes horizontally */
+            gap: 20px; /*puts space between boxes */
+            padding-bottom: 100px;
+        }
+
+        /*box styles*/
+        .factcontainer {
+            border: 1px solid #ccc;
+            padding: 20px;
+            min-width: 270px;
+            max-width: 270px;
+            background-color: white;
+            text-align: center;
+            min-height: 270px;
+        }
+
+        .box-title {
+            font-size: 1.7em;
+            padding-bottom: 15px;
+        }
+
+        .fact-title {
+            font-size: 2em;
+            text-align: center;
+            padding-top: 260px;
+        }
+
+    </style>
+</head>
+<!------------------------------BODY------------------------------------------------>
+<body>
+    <nav class = "navigation-bar">
+        <div class="sandwich-icon-area" onclick="openNav()"> &#9776; </div>
+        <div class="title">Nutrition Ninja </div>
+        <div class="logo"><img src="nutritionmedia/burger.png" class="logo" alt="logo"></div>
+
+    </nav>
+
+
+    <!--curtain dropdown menu-->
+    <div id="myNav" class="overlay">
+        <p class="close-icon" onclick="closeNav()"> &times; </p>
+        <div class="overlay-content">
+            <a href="index.html">HOME</a>
+            <a href="condition.html">CONDITIONS</a>
+            <a href="facts.html">FACTS</a>
+            <a href="tips.html">TIPS</a>
+            <a href="contact.html">CONTACT ME</a>
+        </div>
+    </div>
+
+    <!------------MAIN AREA-------------->
+    <main>
+        <p class="fact-title">FACTS</p>
+        <!-- flexbox for containers -->
+        <div class="facts-containers">
+            <!--left box -->
+            <div class="factcontainer">
+                <p class="box-title">Soft Drinks</p>
+                <p>Approximately ten teaspoons of sugar, or more than the daily recommended amount,
+                     are found in a single can of soda. Tooth decay, type 2 diabetes, and weight gain are 
+                    all influenced by this high sugar content.</p>
+            </div>
+            <!--left middle box-->
+            <div class="factcontainer">
+                <p class="box-title">Potato Chips</p>
+                <p>A typical serving of potato chips has between 10 and 15 grammes of fat and is frequently 
+                    rich in sodium, which raises the risk of stroke and high blood pressure. Fried at high 
+                    temperatures, starchy foods like potato chips develop acrylamide, a possible carcinogen.
+                </p>
+            </div>
+            <!--middle box-->
+            <div class="factcontainer">
+                <p class="box-title">Burgers</p>
+                <p>Fast food burgers frequently include high levels of saturated fat, which raises the risk of
+                    heart disease and cholesterol that clogs arteries.
+                </p>
+            </div>
+            <!--rightmidbox-->
+            <div class="factcontainer">
+                <p class="box-title">Candy</p>
+                <p>Artificial colours and high-fructose corn syrup, which are both associated with hyperactivity
+                    in children and may exacerbate insulin resistance, are abundant in candies, particularly
+                    gummy varieties.
+                </p>
+            </div>
+            <!--right box -->
+            <div class="factcontainer">
+                <p class="box-title">Donuts</p>
+                <p>The majority of donuts are deep-fried and packed with sugar and trans fats, which raise 
+                    the risk of diabetes, heart disease, and obesity in addition to causing inflammation.
+                </p>
+            </div>
+        </div>
+        
+
+        
+    </main>
+<!---------------footer--------------->
+    <footer>
+        <a href="contact.html">
+        <button type="submit">
+            <div class="email-button"><img src="nutritionmedia/gmail.png" style="float: left;" class="footerimg"></div>
+        </button>
+        </a>
+        <div class="footer-text">ITWD5.130: WEBSITE DEVELOPMENT<br> NOAH SYMON @ 2024</div>
+    </footer>
+
+    <!--hamburger menu script -->
+    <script>
+        function openNav() {
+            document.getElementById("myNav").style.display = "block";
+        }
+
+        function closeNav() {
+            document.getElementById("myNav").style.display = "none";
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+
+<!------------------------------HEAD------------------------------------------------>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nutrition Ninja</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <style>
+        /*container holding the boxes */
+        .tips-containers {
+            display: flex;
+            justify-content: center; /* centers the boxes horizontally */
+            gap: 20px; /*puts space between boxes */
+            padding-bottom: 100px;
+        }
+
+        /*box styles*/
+        .tipcontainer {
+            border: 1px solid #ccc;
+            padding: 20px;
+            min-width: 270px;
+            max-width: 270px;
+            background-color: white;
+            text-align: center;
+            min-height: 270px;
+        }
+
+        .box-title {
+            font-size: 1.7em;
+            padding-bottom: 15px;
+        }
+
+        .tip-title {
+            font-size: 2em;
+            text-align: center;
+            padding-top: 260px;
+        }
+
+    </style>
+</head>
+<!------------------------------BODY------------------------------------------------>
+<body>
+    <nav class = "navigation-bar">
+        <div class="sandwich-icon-area" onclick="openNav()"> &#9776; </div>
+        <div class="title">Nutrition Ninja </div>
+        <div class="logo"><img src="nutritionmedia/burger.png" class="logo" alt="logo"></div>
+
+    </nav>
+
+
+    <!--curtain dropdown menu-->
+    <div id="myNav" class="overlay">
+        <p class="close-icon" onclick="closeNav()"> &times; </p>
+        <div class="overlay-content">
+            <a href="index.html">HOME</a>
+            <a href="condition.html">CONDITIONS</a>
+            <a href="facts.html">FACTS</a>
+            <a href="tips.html">TIPS</a>
+            <a href="contact.html">CONTACT ME</a>
+        </div>
+    </div>
+
+    <!------------MAIN AREA-------------->
+    <main>
+        <p class="tip-title">TIPS</p>
+        <!-- flexbox for containers -->
+        <div class="tips-containers">
+            <!--left box -->
+            <div class="tipcontainer">
+                <p class="box-title">Diet Searching</p>
+                <p>Through a good look at somebodies diet, an understanding should be immediately taken
+                    place through the excess amount of unhealthy foods your average person has per day.
+                    This could also act as a wake-up call to the person by simply looking at the overview
+                    of their diet.
+                </p>
+            </div>
+            <!--left middle box-->
+            <div class="tipcontainer">
+                <p class="box-title">Cutting Back</p>
+                <p>Cutting back is a major play in the tips I give people as unhealthy foods is one of the 
+                    main things people struggle with within their everyday diet.
+                </p>
+            </div>
+            <!--middle box-->
+            <div class="tipcontainer">
+                <p class="box-title">Recommendations</p>
+                <p>Recommendations will mostly be cutting back, such as fast food, high sugar items, and 
+                    balancing out your diet with proper proteins, vitamins, fats & carbohydrates.
+                </p>
+            </div>
+            <!--rightmidbox-->
+            <div class="tipcontainer">
+                <p class="box-title">Results</p>
+                <p>Results just include the differences in feeling, weight, and overall healthiness once 
+                    the new diet/help  given has been implemented for a couple of weeks.
+                </p>
+            </div>
+            <!--right box -->
+            <div class="tipcontainer">
+                <p class="box-title">Possibilities</p>
+                <p>Possibilities as in the different things that may be caused by the food you are currently eating 
+                    within your diet. Being told the different health risks at play/possible it helps people
+                    understand that their diet needs a serious change.
+                </p>
+            </div>
+        </div>
+        
+
+        
+    </main>
+<!---------------footer--------------->
+    <footer>
+        <a href="contact.html">
+        <button type="submit">
+            <div class="email-button"><img src="nutritionmedia/gmail.png" style="float: left;" class="footerimg"></div>
+        </button>
+        </a>
+        <div class="footer-text">ITWD5.130: WEBSITE DEVELOPMENT<br> NOAH SYMON @ 2024</div>
+    </footer>
+
+    <!--hamburger menu script -->
+    <script>
+        function openNav() {
+            document.getElementById("myNav").style.display = "block";
+        }
+
+        function closeNav() {
+            document.getElementById("myNav").style.display = "none";
+        }
+    </script>
+</body>
+
+</html>

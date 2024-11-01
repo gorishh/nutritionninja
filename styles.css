@@ -1,0 +1,249 @@
+
+/* first applying mobile approach, using daniel template to help.
+all css styles below are small devices, on small device hide horizontal navbar*/
+/*remove all default css styles*/
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+/*-------------------------------------*/
+
+/*title text*/ 
+.title {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    font-size: 2em; /*1em=16px => 32px = 2em*/
+    padding-top: 16px;
+}
+
+.logo {
+    float: left;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    height:40px;
+    width:40px;
+
+}
+
+/*curtain menu navbar*/
+nav {
+    min-height: 8vh;
+    background-color: rgb(189, 255, 196);
+}
+/*image rounded corners & size*/
+img {
+    height: 100px;
+    width: 21%;
+    border-radius: 12%;
+}
+
+/*hamburger icon*/
+.sandwich-icon-area {
+    position: absolute;
+    left: 10px;
+    font-size: 2em; /*1em=16px => 32px = 2em*/
+    float: left;
+    cursor: pointer;
+    padding-top: 13px;
+}
+/*centers the index animation*/
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+/*curtain menu layer*/
+.overlay {
+    height: 100%;
+    width: 50%;
+    display: none; /*block: show; none: hide*/
+    background-color: rgba(0,0,0, 0.9);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1; /*layer sit on top of other layer*/
+}
+.overlay-content {
+    position: relative;
+    top: 25%;
+    width: 100%;
+    text-align: center;
+    margin-top: 32px;
+}
+.overlay a {
+    padding: 8px;
+    text-decoration: none; /*remove all default styles*/
+    font-size: 2.0em;/*1em=16px => 2em = 32px*/
+    color: white;
+    display: block;
+}
+.close-icon {
+    position: absolute;
+    top: 1.0em;
+    right: 1.5em; /*1.5em = 1.5*16px = 24px */
+    font-size: 4.0em;
+    color: white;
+}
+/*hover effects to the hyperlinks  */
+.overlay a:hover, .overlay a:focus {
+    color: rgb(172, 255, 172);
+}
+
+/*more padding*/
+
+.container {
+border: 1px solid #ccc;
+padding: 20px;
+max-width: 400px; /*adjusting max width as needed*/
+margin: 20px auto; /*centering container*/
+font-size: 1.2em;
+}
+img {
+max-width: 100%; /*making image doesnt exceed container width*/
+height: auto;
+display: block;
+}
+
+/*------------------------------------*/
+/*main & its colour - gradient*/
+main {
+    background-image: linear-gradient(to bottom, white, #bdffbf);
+    min-height: 84vh;
+}
+
+/*-----------------------------------*/
+/*---------CONTACT-----------*/
+/*contact title styling*/
+.contact-title {
+    font-size: 2em;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+/*fname and lname in contact */
+input[type=text], select, textarea {
+    width: 100%; 
+    padding: 12px; 
+    border: 1px solid #ccc; 
+    border-radius: 5px; 
+    margin-bottom: 5px; 
+    margin-top: 5px; 
+    resize: vertical
+}
+  
+/* submit button */ submit button
+input[type=submit] {
+    background-color: #318c34;
+    color: white;
+    padding: 20px 20px;
+    border-radius: 7px;
+    cursor: pointer;
+}
+  
+/*bg & padding for form */
+.contact-form {
+    border-radius: 5px;
+    background-color: #f2f2f2ef;
+    padding: 20px;
+}
+/* contact done */
+
+
+/*footer define*/
+footer {
+    height: 8vh;
+    background-color: #bdffbf;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*styling the button*/
+footer button {
+    border: none;
+    margin-right: auto;
+    background: none;
+}
+/*gmail img*/
+.footerimg {
+    width: 60px;
+    height: 60px;
+    position: fixed;
+    float: left;
+    left: 10px;
+    bottom: 0px;
+}
+/*centering footer text*/
+.footer-text {
+    text-align: center;
+    font-size: 1em;
+    padding-bottom: 5px;
+}
+
+
+/* 1px line above footer*/
+footer {
+    border-top: 1px solid #ffffff;
+}
+/*optional transperancy/opactity for email width bug*/
+
+
+/*------------------------------------------------------*/
+/*below styles applied for medium devices*/
+@media screen and (min-width: 426px) {
+    /*medium devices*/
+    .flex-container {
+        flex-direction: column; /* stack the boxes vertically */
+        align-items: center; /* center align the boxes */
+    }
+    .container {
+        max-width: 90%; /* adjust the box width for smaller screens */
+    }
+
+    .condition-containers  {
+        flex-direction: column; 
+        align-items: center; 
+    }
+    .facts-containers  {
+        flex-direction: column; 
+        align-items: center; 
+    }
+    .tips-containers  {
+        flex-direction: column; 
+        align-items: center; 
+    }
+/*curtain overlay becomes full width of screen when phone mode*/
+    .overlay {
+        width: 100%;
+    }
+}
+
+
+/*big devices below */
+@media screen and (min-width: 769px) {
+    /*big devices*/
+    .flex-container {
+        flex-direction: row;
+        align-items: center;
+    }
+    .overlay {
+        width: 50%;
+    }
+
+    .condition-containers {
+        flex-direction: row;
+        align-items: center;
+    }
+    .tips-containers {
+        flex-direction: row;
+        align-items: center;
+    }
+    .facts-containers {
+        flex-direction: row;
+        align-items: center;
+    }
+}

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+
+<!------------------------------HEAD------------------------------------------------>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nutrition Ninja</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <style>
+        /*container holding the boxes */
+        .flex-container {
+            display: flex;
+            justify-content: center; /* centers the boxes horizontally */
+            gap: 20px; /*puts space between boxes */
+        }
+
+        /*box styles*/
+        .container {
+            border: 1px solid #ccc;
+            padding: 20px;
+            max-width: 400px;
+            min-height: 160px;
+            background-color: white;
+            text-align: center;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto; 
+            display: block; 
+        }
+
+
+    </style>
+</head>
+
+<!------------------------------BODY------------------------------------------------>
+<body>
+    <nav class = "navigation-bar">
+        <div class="sandwich-icon-area" onclick="openNav()"> &#9776; </div>
+        <div class="title">Nutrition Ninja </div>
+        <div class="logo"><img src="nutritionmedia/burger.png" class="logo" alt="logo"></div>
+
+    </nav>
+
+
+    <!--curtain dropdown menu-->
+    <div id="myNav" class="overlay">
+        <p class="close-icon" onclick="closeNav()"> &times; </p>
+        <div class="overlay-content">
+            <a href="index.html">HOME</a>
+            <a href="condition.html">CONDITIONS</a>
+            <a href="facts.html">FACTS</a>
+            <a href="tips.html">TIPS</a>
+            <a href="contact.html">CONTACT ME</a>
+        </div>
+    </div>
+
+    <!------------MAIN AREA-------------->
+    <main>
+        <section>
+            <div style="margin-top: 20px"></div>
+            <img id="slide-image" src="nutritionmedia/0.png" class="center" width="400" height="400">
+        </section>
+
+        <!--slideshow stuff--------->
+        <script> 
+            //declaring array of images to create my slideshow.
+            let slideshowpx = [{id: 0, img_url: "nutritionmedia/0.png"},
+                            {id: 1, img_url: "nutritionmedia/1.png"},
+                            {id: 2, img_url: "nutritionmedia/2.png"}]
+    
+            //create a slideshow 
+            //create a function in javascript
+            let slideshowIndex = 0;
+            function autoSlideshow() {
+                //check if slideshow < the length of the array, if true -> increase the index by 1, else set slideshowIndex=0
+                if (slideshowIndex < slideshowpx.length - 1) {
+                    slideshowIndex++; //increment by 1
+                } else {
+                    slideshowIndex = 0;
+                }
+                //just update the title and image url accordingly 
+                document.getElementById('slide-image').src = slideshowpx[slideshowIndex].img_url;
+                //wait for a while - 2 sec
+                setTimeout(autoSlideshow, 2000);
+            }
+            //call to run or execute this autoslideshow function
+            autoSlideshow();
+        </script>
+
+        <!-- flexbox for containers -->
+        <div class="flex-container">
+            <!--left box -->
+            <div class="container">
+                <p>Tips / examples of what I offer</p>
+                <img src="nutritionmedia/tips.png" alt="image didnt load">
+                <a href="tips.html">
+                <button class="center" type="button">Read More</button>
+                </a>
+            </div>
+            <!--middle box-->
+            <div class="container">
+                <p>Contact Me</p>
+                <img src="nutritionmedia/contact.png" alt="image didnt load">
+                <a href="contact.html">
+                <button class="center" type="button">Read More</button>
+                </a>
+            </div>
+            <!--right box -->
+            <div class="container">
+                <p>Conditions (food & health awareness)</p>
+                <img src="nutritionmedia/conditions.png" alt="image didnt load">
+                <a href="condition.html">
+                <button class="center" type="button">Read More</button>
+                </a>
+            </div>
+        </div>
+    </main>
+<!---------------footer--------------->
+    <footer>
+        <a href="contact.html">
+        <button type="submit">
+            <div class="email-button"><img src="nutritionmedia/gmail.png" style="float: left;" class="footerimg"></div>
+        </button>
+        </a>
+        <div class="footer-text">ITWD5.130: WEBSITE DEVELOPMENT<br> NOAH SYMON @ 2024</div>
+    </footer>
+
+    <!--hamburger menu script -->
+    <script>
+        function openNav() {
+            document.getElementById("myNav").style.display = "block";
+        }
+
+        function closeNav() {
+            document.getElementById("myNav").style.display = "none";
+        }
+    </script>
+</body>
+
+</html>
